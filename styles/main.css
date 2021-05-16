@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face{
+    font-family: 'Netflix';
+    src: url('../fonts/AvenirNextLTPro-Regular.otf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Netflix';
+    src: url('../fonts/AvenirNextLTPro-Bold.otf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.header{
+    padding: 15px 15px 100px;
+    position: relative;
+    z-index: 2;
+    background-image: linear-gradient(to bottom, black 0%, black 50%, rgba(0,0,0, .5) 85%, transparent 100%);
+
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Netflix';
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav{
+    position: static;
+    display: flex;
+    justify-content: space-around;
+/*     display: grid;
+    grid-auto-columns: 75px;
+    grid-auto-flow: column;
+    justify-content: space-around; */
+}
+.nav-item{
+    list-style: none;
+    text-align: center;
+    padding: 5px;
+
+}
+
+.feature{
+    margin-top: -90px;
+    position: relative;
+}
+
+.description{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+.descriptions{
+    text-decoration: none;
+    list-style: none;
+}
+
+.descriptions:before{
+    content: "•";
+    margin-right: 5px;
+}
+
+#Surrealista:before{
+    content: "";
+}
+
+.details{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to top,black 0%, transparent 100%);
+}
+
+.buttons-h{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 2em;
+}
+
+.button-s{
+    border: 1px solid red;
+    background: none;
+    color: white;
+    
+}
+
+.button-s::before{
+    border: 1px solid green;
+    content: "";
+    display: block;
+    height: 25px;
+    width: 25px;
+    margin: auto;
+
+
+}
+.button-play{
+    border: 1px solid blue;
+}
+
+.icon-list::before{
+    background: url('../icons/plus.svg')
+}
+.icon-info::before{
+    background: url('../icons/info.svg')
+}
+.button-play::before{
+    background: url('../icons/play.svg')
+}
+
