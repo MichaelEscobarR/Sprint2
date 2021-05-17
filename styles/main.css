@@ -16,24 +16,33 @@
     font-style: normal;
 }
 
-.header{
-    padding: 15px 15px 100px;
-    position: relative;
-    z-index: 2;
-    background-image: linear-gradient(to bottom, black 0%, black 50%, rgba(0,0,0, .5) 85%, transparent 100%);
-
-}
-
 body{
     background-color: black;
     color: white;
     font-family: 'Netflix';
 }
 
+
+.header{
+    padding: 15px 15px 100px;
+    position: relative;
+    z-index: 2;
+    background-image: linear-gradient(to bottom, black 0%, black 50%, rgba(0,0,0, .5) 85%, transparent 100%);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 a{
     color: white;
     text-decoration: none;
 }
+
+/* .video{
+    width: 100%;
+} */
 
 .nav{
     position: static;
@@ -47,43 +56,46 @@ a{
 .nav-item{
     list-style: none;
     text-align: center;
-    padding: 5px;
-
 }
 
 .feature{
     margin-top: -90px;
     position: relative;
-}
-
-.description{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 0;
-}
-
-.descriptions{
-    text-decoration: none;
-    list-style: none;
-}
-
-.descriptions:before{
-    content: "•";
-    margin-right: 5px;
-}
-
-#Surrealista:before{
-    content: "";
-}
+    overflow: hidden;
+    }
 
 .details{
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: linear-gradient(to top,black 0%, transparent 100%);
+    background-image: linear-gradient(to top,black 0%, black 40%, transparent 100%);
 }
+
+.description{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+.descriptions{
+display: flex;
+}
+
+.descriptions:before{
+    content: "•";
+    margin-right: 5px;
+    position: relative;
+    top:2px;
+}
+
+#Surrealista:before{
+    content: "";
+}
+
+
 
 .buttons-h{
     display: flex;
@@ -92,25 +104,38 @@ a{
     padding-bottom: 2em;
 }
 
+.button-play{
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 2px 1em;
+    border-radius: 3px;
+    border: none;
+}
+
+.button-play::before{
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
 .button-s{
-    border: 1px solid red;
     background: none;
     color: white;
-    
+    font-size: 1.1em;
+    min-width: 100px;
+    border: none;
 }
 
 .button-s::before{
-    border: 1px solid green;
     content: "";
     display: block;
     height: 25px;
     width: 25px;
     margin: auto;
-
-
-}
-.button-play{
-    border: 1px solid blue;
+    margin-bottom: 5px;
 }
 
 .icon-list::before{
@@ -123,3 +148,60 @@ a{
     background: url('../icons/play.svg')
 }
 
+
+
+.list-content{
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.list-item{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+
+.list{
+    padding-left: 15px;
+}
+
+
+
+.footer{
+    position: sticky;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: black;
+    padding: 1em 0 0;
+
+}
+
+
+.tabs{
+    display:grid;
+    grid-auto-flow: column;
+    list-style: none;
+    padding-bottom: 1em;
+}
+
+.tabs a{
+    color:gray;
+}
+
+.tab{
+    text-align: center;
+}
+
+.tab:hover :is(path, span){
+    fill: white;
+    color: white;
+}
+
+.tab-icon{
+    display: block;
+    margin: auto;
+}
+.tab-icon path{
+   fill: gray;
+}
