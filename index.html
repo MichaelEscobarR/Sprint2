@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/main.css">
+    <script src="./scripts/script.js"></script>
     <title>Sprint dos</title>
 </head>
-
 <body>
     <header class="header">
         <img id="Logo-Netflix" src="./images/logo-netflix.png" alt="Logo Netflix" height="30">
@@ -21,7 +20,10 @@
         </nav>
     </header>
     <div class="feature">
-        <video src="./images/video-matrix.mp4" class="video" height="500"></video>
+        <div class="video-matrixr">
+            <video src="./images/video-matrix.mp4" class="video" height="500" autoplay loop muted></video>
+        </div>
+        
         <div class="details">
             <ul class="description">
                 <li id="Surrealista" class="descriptions">
@@ -43,12 +45,10 @@
             <div class="buttons-h">
                 <button class="button-s icon-list">Mi lista</button>
                 <button class="button-play">Reproducir</button>
-                <button class="button-s icon-info">Info</button>
+                <button class="button-s icon-info"><a target="_blank" href="info-matrix.html">info</a></button>
             </div>
         </div>
     </div>
-
-
     <main>
         <div class="list">
             <h2 class="list-title">Populares en Netflix</h2>
@@ -80,8 +80,6 @@
                 </div>
             </div>
         </div>
-
-
         <div class="list">
             <h2 class="list-title">Series japonesas anime</h2>
             <div class="list-content">
@@ -112,7 +110,6 @@
                 </div>
             </div>
         </div>
-
         <div class="list">
             <h2 class="list-title">Series de EE.UU. sobre crimenes</h2>
             <div class="list-content">
@@ -146,21 +143,36 @@
     </main>
 </body>
 
+<div class="form">
+    <div class="register">
+        <h2>Registrate aquí</h2>
+    </div>
+    <form id="form-re" action="">
+        <label class="label-form" for="">Nombres</label>
+        <input id="nombreUsuario" class="input" type="text"><br>
+        <label class="label-form"   for="">Apellidos</label>
+        <input id="apellidoUsuario" class="input" type="text"><br>
+        <label class="label-form"   for="">Correo electrónico</label>
+        <input id="correoUsuario" class="input" type="email"><br>
+        <label class="label-form"   for="">Celular</label>
+        <input id="celularUsuario" class="input" type="number"><br>
+        <button id="button-form" type="button" onclick="recogerDatos()">Suscribirme</button>
+    </form>
+
+</div>
 <footer class="footer">
     <ul class="tabs">
-
         <li class="tab">
             <a href="#"> <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M12 2.09961L1 12H4V21H11V15H13V21H20V12H23L12 2.09961ZM12 4.79102L18 10.1914V11V19H15V13H9V19H6V10.1914L12 4.79102Z" />
-            </svg> 
-            <span>Inicio</span> 
+            </svg>
+            <span>Inicio</span>
         </a>
         </li>
-
         <li class="tab">
-            <a href=""> <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            <a href="#"> <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0)">
                     <path
@@ -175,9 +187,8 @@
             </svg>
                 <span>Próximamente</span></a>
         </li>
-
         <li class="tab">
-            <a href=""><svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            <a href="#"><svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M9 2C5.14585 2 2 5.14585 2 9C2 12.8541 5.14585 16 9 16C10.748 16 12.345 15.348 13.5742 14.2812L14 14.707V16L20 22L22 20L16 14H14.707L14.2812 13.5742C15.348 12.345 16 10.748 16 9C16 5.14585 12.8541 2 9 2ZM9 4C11.7733 4 14 6.22673 14 9C14 11.7733 11.7733 14 9 14C6.22673 14 4 11.7733 4 9C4 6.22673 6.22673 4 9 4Z"
@@ -185,14 +196,11 @@
             </svg><span>Buscar</span>
                 </a>
         </li>
-
-
         <li class="tab">
-            <a href=""><svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <a href="#"><svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11 2C10.448 2 10 2.448 10 3V11H6L12 17L18 11H14V3C14 2.448 13.552 2 13 2H11ZM2 20V22H22V20H2Z" fill="black"/>
                 </svg><span>Descargas</span>
                 </a></li>
     </ul>
 </footer>
-
 </html>

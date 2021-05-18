@@ -61,45 +61,43 @@ a{
     position: absolute;
     width: 100%;
 }
-.details{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-image: linear-gradient(to top,black 0%, black 40%, transparent 100%);
-}
-.description{
+.container-title{
+
+    width: 95%;
+    margin: auto;
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    list-style: none;
-    padding: 0;
+    flex-direction: column;
+    margin-top: 5px;
 }
-.descriptions{
-display: flex;
+.title-matrix{
+    margin-bottom: 5px;
 }
-.descriptions:before{
-    content: "•";
-    margin-right: 5px;
-    position: relative;
-    top:2px;
+#coinci{
+    color: rgba(113, 208, 116, 1);
 }
-#Surrealista:before{
-    content: "";
-}
-.buttons-h{
+.actions{
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    flex-direction: column;
+    justify-content:center;
     padding-bottom: 2em;
+    padding-top: 1em;
+
+    width: 95%;
+    align-items: center;
+    margin: auto;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .button-play{
+    width: 100%;
     background: white;
     display: flex;
     align-items: center;
     padding: 2px 1em;
     border-radius: 3px;
     border: none;
+    justify-content: center;
 }
 .button-play::before{
     content: "";
@@ -107,6 +105,40 @@ display: flex;
     width: 25px;
     height: 25px;
     margin-right: 5px;
+    background: url('../icons/play.svg')
+    }
+.button-download{
+    color: white;
+    width: 100%;
+    background: rgba(43, 43, 43, 1);
+    border-radius: 3px;
+    display: flex;
+    border: none;
+    align-items: center;
+    padding: 2px 1em;
+    justify-content: center;
+}
+.button-download::before{
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    background: url('../icons/download.svg')
+    }
+.desc{
+    width: 95%;
+    margin: auto;
+}
+#sinopsis{
+    text-align: justify;
+}
+/*fghfhfhfhdfhdhdf*/
+.buttons-h{
+    display: flex;
+    justify-content:left;
+    padding-bottom: 2em;
+    padding-top: 1em;
 }
 .button-s{
     background: none;
@@ -127,10 +159,10 @@ display: flex;
     background: url('../icons/plus.svg')
 }
 .icon-info::before{
-    background: url('../icons/info.svg')
+    background: url('../icons/email-send.svg')
 }
-.button-play::before{
-    background: url('../icons/play.svg')
+.icon-like::before{
+    background: url('../icons/like.svg')
 }
 .list-content{
     white-space: nowrap;
@@ -173,44 +205,4 @@ display: flex;
 }
 .tab-icon path{
     fill: gray;
-}
-.form{
-    display: flex;
-    flex-direction: column;
-    width: 95%;
-    margin: auto;
-
-}
-#form-re{
-    margin-top: 5px;
-    display: flex;
-    flex-direction: column;
-}
-.register{
-    margin: auto;
-    display: flex;
-    color: red;
-}
-
-.input{
-    width: 30%;
-    margin: auto;
-    border-radius: 50px;
-
-}
-.label-form{
-    margin: auto;
-    background-color:rgba(43, 43, 43, 1);
-}
-
-#button-form{
-    width: 30%;
-    padding: 5px;
-    border-radius: 50px;
-    margin: auto;
-    background-color: red;
-    font-size: 15px;
-    font-weight: 900;
-    display: flex;
-    justify-content: center;
 }
